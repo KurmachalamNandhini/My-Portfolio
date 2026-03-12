@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#internships">Internships</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div>
+            <h1>Hello, I'm Kurmachalam Nandhini </h1>
+            <div class="pic"> <img src="img.jpeg" alt="image"> </div>
+            <p>Web Developer | Programmer</p>
+            <div class="link">
+                <a href="mailto:nandhinimncl@gmail.com" class="btn" target="_blank">Send Email</a>
+                <a href="https://www.linkedin.com/in/kurmachalam-nandhini-357849389/" target="_blank"
+                    rel="noopener noreferrer" class="btn">LinkedIn</a>
+            </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="card">
+                <p>I am a first-year B.Tech student with a strong interest in web development and a passion
+                    for learning modern technologies and I am continuously working to improve my technical skills.
+                    Along with my technical interest, I am a good team player with strong communication skills. I enjoy
+                    collaborating with others,
+                    sharing ideas, and learning from feedback. I am self-motivated, adaptable, and eager to take on new
+                    challenges that help me grow
+                    both personally and professionally.I am currently seeking opportunities to gain hands-on experience,
+                    enhance my web development skills,
+                    and contribute effectively to team-based projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="card">
+                <h3>Bachelor of Technology</h3>
+                <p>Malla Reddy University | 2025 - 2029</p>
+                <p>(Pursuing)</p>
+            </div>
+
+            <div class="card">
+                <h3>Intermediate</h3>
+                <p>Excellencia Junior College | 2023 - 2025</p>
+                <p>(Completed)</p>
+            </div>
+
+            <div class="card">
+                <h3>Secondary School (Grade X)</h3>
+                <p>Carmel Convent High School | 2022 - 2023</p>
+                <p>(Completed)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="card">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="card">
+                <h3>Campus Navigation System</h3>
+                <p>The Campus Navigation System is a fully frontend, interactive web application developed
+                    to help students, faculty, and visitors efficiently navigate the Malla Reddy University
+                    campus, designed using HTML and CSS.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="internships">
+        <div class="container">
+            <h2>Internships</h2>
+            <div class="card">
+                <h3>Web Developer Intern</h3>
+                <p>Bhumi Soul Company </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="card">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <p id="formMessage"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Kurmachalam Nandhini | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Construct mailto link
+            var subject = encodeURIComponent('Portfolio Contact from ' + name);
+            var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+            var mailtoLink = 'mailto:nandhinimncl@gmail.com?subject=' + subject + '&body=' + body;
+
+            // Open default mail client in a new context to prevent browser blocking
+            window.open(mailtoLink, '_blank');
+
+            // Show success message and clear form
+            var messageElement = document.getElementById('formMessage');
+            messageElement.textContent = 'Opening your email client...';
+            messageElement.style.color = '#00adb5';
+            messageElement.style.marginTop = '15px';
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
