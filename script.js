@@ -204,27 +204,48 @@ $(document).ready(function() {
     });
 
     // Form Submission Details
+    const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+    const WEB3FORMS_ACCESS_KEY = '123def51-59a8-4524-b3e4-ff4303fd469f';
+
     $('#contactForm').on('submit', function (event) {
-        event.preventDefault(); 
-        
-        let name = $('#name').val();
-        let email = $('#email').val();
-        let message = $('#message').val();
+        event.preventDefault();
 
-        // Construct mailto link
-        let subject = encodeURIComponent('Portfolio Contact Request from ' + name);
-        let body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-        let mailtoLink = 'mailto:nandhinimncl@gmail.com?subject=' + subject + '&body=' + body;
+        const form = this;
+        const submitButton = $(form).find('button[type="submit"]');
+        const formMessage = $('#formMessage');
+        const formData = new FormData(form);
 
-        // Open default mail client
-        window.open(mailtoLink, '_blank');
+        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+        formData.append('subject', 'New contact request from portfolio');
+        formData.append('message', $('#message').val());
+        formData.append('redirect', '');
 
-        // Show success message and clear form
-        $('#formMessage').text('Opening your email client...').css({'color': 'var(--main-color)', 'margin-top': '15px'});
-        this.reset();
-        
-        setTimeout(() => {
-            $('#formMessage').fadeOut();
-        }, 5000);
+        submitButton.prop('disabled', true).addClass('disabled');
+        formMessage.text('Sending message...').css({'color': 'var(--text-color)', 'margin-top': '15px'}).show();
+
+        fetch(WEB3FORMS_ENDPOINT, {
+            method: 'POST',
+            mode: 'cors',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                formMessage.text('Message sent successfully! I will get back to you soon.').css('color', 'var(--main-color)');
+                form.reset();
+            } else {
+                throw new Error(data.message || 'Form submission failed.');
+            }
+        })
+        .catch(error => {
+            console.error('Web3Forms submission error:', error);
+            formMessage.text('Oops! Something went wrong. Please try again later.').css('color', '#ff6b6b');
+        })
+        .finally(() => {
+            submitButton.prop('disabled', false).removeClass('disabled');
+            setTimeout(() => {
+                formMessage.fadeOut();
+            }, 7000);
+        });
     });
 });
