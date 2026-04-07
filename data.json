@@ -1,0 +1,57 @@
+{
+  "personal": {
+    "name": "Kurmachalam Nandhini",
+    "roles": ["Web Developer", "Programmer", "B.Tech Student"],
+    "bio": "I am a first-year B.Tech student who builds production-ready web experiences. While most of my peers are learning basic syntax, I am already interning as a Web Developer and architecting dynamic frontend interfaces. I obsess over clean UI/UX, responsive design, and scalable code. I am eager to contribute effectively to team-based projects and take on high-impact challenges.",
+    "email": "nandhinimncl@gmail.com",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/kurmachalam-nandhini-357849389/"
+    }
+  },
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "institution": "Malla Reddy University",
+      "period": "2025 - 2029",
+      "status": "Pursuing",
+      "icon": "fa-graduation-cap"
+    },
+    {
+      "degree": "Intermediate",
+      "institution": "Excellencia Junior College",
+      "period": "2023 - 2025",
+      "status": "Completed",
+      "icon": "fa-school"
+    }
+  ],
+  "skills": [
+    { "name": "HTML", "level": 90, "color": "#e34c26" },
+    { "name": "CSS", "level": 85, "color": "#264de4" },
+    { "name": "JavaScript", "level": 75, "color": "#f0db4f" },
+    { "name": "C", "level": 80, "color": "#a8b9cc" },
+    { "name": "C++", "level": 75, "color": "#00599C" },
+    { "name": "Python", "level": 70, "color": "#ffde57" }
+  ],
+  "projects": [
+    {
+      "title": "Premium Developer Portfolio Engine",
+      "description": "Engineered a high-performance, fully responsive portfolio using a decoupled architecture where all UI content is fetched dynamically from a JSON data layer, featuring custom DOM animations and 3D tilt interactions.",
+      "tech": ["HTML5", "CSS3", "JavaScript", "JSON", "GSAP"],
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Campus Navigation System",
+      "description": "A frontend interactive web application developed to help students, faculty, and visitors efficiently navigate the Malla Reddy University campus, utilizing responsive CSS grids and semantic HTML.",
+      "tech": ["HTML", "CSS"],
+      "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "internships": [
+    {
+      "role": "Web Developer Intern",
+      "company": "Bhumi Soul Company",
+      "description": "Collaborated with senior engineers to build UI components for enterprise applications. Gained hands-on experience with modern web development workflows, Git version control, and responsive UI/UX implementation.",
+      "icon": "fa-briefcase"
+    }
+  ]
+}

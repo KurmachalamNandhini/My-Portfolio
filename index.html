@@ -1,163 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurmachalam Nandhini - Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon to clear 404 console error -->
+    <link rel="icon" href="data:,">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
 
-    <header>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#internships">Internships</a>
-            <a href="#contact">Contact</a>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Background Elements -->
+    <div id="particles-js"></div>
+    <div class="gradient-bg"></div>
+
+    <!-- Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">KN<span>.</span></a>
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <div>
-            <h1>Hello, I'm Kurmachalam Nandhini </h1>
-            <div class="pic"> <img src="img.jpeg" alt="image"> </div>
-            <p>Web Developer | Programmer</p>
-            <div class="link">
-                <a href="mailto:nandhinimncl@gmail.com" class="btn" target="_blank">Send Email</a>
-                <a href="https://www.linkedin.com/in/kurmachalam-nandhini-357849389/" target="_blank"
-                    rel="noopener noreferrer" class="btn">LinkedIn</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h3 class="highlight">Hello, I'm</h3>
+            <h1 id="hero-name">Kurmachalam Nandhini</h1>
+            <h2>And I'm a <span class="typing"></span></h2>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+                <a href="#projects" class="btn btn-secondary">My Work</a>
             </div>
+            <div class="social-links-hero">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+        <div class="hero-img-container" data-tilt>
+            <div class="hero-img-bg"></div>
+            <img src="img.jpeg" alt="Kurmachalam Nandhini profile picture" class="hero-img">
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
     </section>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="card">
-                <p>I am a first-year B.Tech student with a strong interest in web development and a passion
-                    for learning modern technologies and I am continuously working to improve my technical skills.
-                    Along with my technical interest, I am a good team player with strong communication skills. I enjoy
-                    collaborating with others,
-                    sharing ideas, and learning from feedback. I am self-motivated, adaptable, and eager to take on new
-                    challenges that help me grow
-                    both personally and professionally.I am currently seeking opportunities to gain hands-on experience,
-                    enhance my web development skills,
-                    and contribute effectively to team-based projects.</p>
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="about-content glass-card">
+                <div class="about-text" id="about-bio">
+                    <!-- Loaded from JS -->
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="education">
+    <!-- Education Section -->
+    <section id="education" class="section bg-secondary">
         <div class="container">
-            <h2>Education</h2>
-            <div class="card">
-                <h3>Bachelor of Technology</h3>
-                <p>Malla Reddy University | 2025 - 2029</p>
-                <p>(Pursuing)</p>
-            </div>
-
-            <div class="card">
-                <h3>Intermediate</h3>
-                <p>Excellencia Junior College | 2023 - 2025</p>
-                <p>(Completed)</p>
-            </div>
-
-            <div class="card">
-                <h3>Secondary School (Grade X)</h3>
-                <p>Carmel Convent High School | 2022 - 2023</p>
-                <p>(Completed)</p>
+            <h2 class="section-title">My <span>Education</span></h2>
+            <div class="timeline" id="education-timeline">
+                <!-- Loaded from JS -->
             </div>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="section">
         <div class="container">
-            <h2>Skills</h2>
-            <div class="card">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>C</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul>
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-grid" id="skills-container">
+                <!-- Loaded from JS -->
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-secondary">
         <div class="container">
-            <h2>Projects</h2>
-            <div class="card">
-                <h3>Campus Navigation System</h3>
-                <p>The Campus Navigation System is a fully frontend, interactive web application developed
-                    to help students, faculty, and visitors efficiently navigate the Malla Reddy University
-                    campus, designed using HTML and CSS.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="internships">
-        <div class="container">
-            <h2>Internships</h2>
-            <div class="card">
-                <h3>Web Developer Intern</h3>
-                <p>Bhumi Soul Company </p>
+            <h2 class="section-title">My <span>Projects</span></h2>
+            <div class="projects-grid" id="projects-container">
+                <!-- Loaded from JS -->
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Internships Section -->
+    <section id="internships" class="section">
         <div class="container">
-            <h2>Contact Me</h2>
-            <div class="card">
-                <form id="contactForm">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-                <p id="formMessage"></p>
+            <h2 class="section-title">My <span>Internships</span></h2>
+            <div class="internships-grid" id="internships-container">
+                <!-- Loaded from JS -->
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact <span>Me</span></h2>
+            <div class="contact-wrapper">
+                <div class="contact-info glass-card tilt-card" data-tilt>
+                    <h3>Get in Touch</h3>
+                    <p>I'm currently looking for new opportunities. Feel free to reach out!</p>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><a id="contact-email" href=""></a></span>
+                    </div>
+                </div>
+                <div class="contact-form glass-card">
+                    <form id="contactForm">
+                        <div class="input-group">
+                            <input type="text" id="name" required placeholder=" " autocomplete="off">
+                            <label for="name">Your Name</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="email" required placeholder=" " autocomplete="off">
+                            <label for="email">Your Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <p id="formMessage"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Kurmachalam Nandhini | All Rights Reserved</p>
+        <p>&copy; 2026 Kurmachalam Nandhini. All rights reserved.</p>
+        <a href="#home" class="back-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
     </footer>
 
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent page reload
-
-            // Get form values
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var message = document.getElementById('message').value;
-
-            // Construct mailto link
-            var subject = encodeURIComponent('Portfolio Contact from ' + name);
-            var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
-            var mailtoLink = 'mailto:nandhinimncl@gmail.com?subject=' + subject + '&body=' + body;
-
-            // Open default mail client in a new context to prevent browser blocking
-            window.open(mailtoLink, '_blank');
-
-            // Show success message and clear form
-            var messageElement = document.getElementById('formMessage');
-            messageElement.textContent = 'Opening your email client...';
-            messageElement.style.color = '#00adb5';
-            messageElement.style.marginTop = '15px';
-            this.reset();
-        });
-    </script>
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
-
 </html>
